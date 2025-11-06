@@ -6,169 +6,8 @@
 <title>FixMate - ICTC Complaint System</title>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-    body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        background: linear-gradient(135deg, #c9eaff, #dfffea);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header {
-        background: linear-gradient(90deg, #007aff, #00c6a7);
-        color: white;
-        width: 100%;
-        padding: 1.2rem;
-        text-align: center;
-        font-weight: bold;
-        font-size: 1.6rem;
-        letter-spacing: 1px;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    }
-
-    .container {
-        width: 90%;
-        max-width: 850px;
-        margin: 2rem auto;
-        background: rgba(255, 255, 255, 0.85);
-        border-radius: 20px;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        backdrop-filter: blur(10px);
-        padding: 2rem;
-        transition: 0.3s ease-in-out;
-    }
-
-    h2 {
-        text-align: center;
-        color: #007aff;
-        font-size: 1.6rem;
-    }
-
-    input, select, button, textarea {
-        width: 100%;
-        padding: 12px;
-        margin: 0.6rem 0;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        font-size: 1rem;
-        background-color: #fafafa;
-        transition: 0.3s;
-    }
-
-    input:focus, textarea:focus, select:focus {
-        outline: none;
-        border-color: #00c6a7;
-        box-shadow: 0 0 8px rgba(0, 198, 167, 0.3);
-    }
-
-    button {
-        background: linear-gradient(90deg, #007aff, #00c6a7);
-        color: white;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        border-radius: 10px;
-        padding: 12px;
-        transition: all 0.3s ease;
-    }
-
-    button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .hidden { display: none; }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 1rem;
-        border-radius: 12px;
-        overflow: hidden;
-    }
-
-    th, td {
-        text-align: left;
-        padding: 12px;
-        background: #262020aa;
-    }
-
-    th {
-        background: linear-gradient(90deg, #007aff, #00c6a7);
-        color: white;
-    }
-
-    tr:nth-child(even) td {
-        background-color: #f3f9ff;
-    }
-
-    .status {
-        font-weight: bold;
-        text-transform: capitalize;
-    }
-
-    .pending { color: #ff9500; }
-    .inprogress { color: #007aff; }
-    .resolved { color: #34c759; }
-
-    .tab-btns {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-    }
-
-    .tab-btns button {
-        flex: 1;
-        margin: 0 4px;
-        background: #e7f3ff;
-        color: #007aff;
-        font-weight: 600;
-        border-radius: 8px;
-        border: none;
-        padding: 10px;
-        transition: 0.3s;
-    }
-
-    .tab-btns button.active {
-        background: linear-gradient(90deg, #007aff, #00c6a7);
-        color: white;
-    }
-
-    .password-container {
-        position: relative;
-    }
-
-    .toggle-password {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-
-    .toggle-password svg {
-        width: 22px;
-        height: 22px;
-        fill: #777;
-    }
-
-    a {
-        color: #007aff;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-</style><style>
-/* Offline Dark Aesthetic Theme - No Internet Needed */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     background: linear-gradient(135deg, #0a192f, #112240);
     color: #f0f4ff;
@@ -177,8 +16,6 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
-/* HEADER */
 header {
     background: linear-gradient(90deg, #1e3c72, #2a5298);
     color: #fff;
@@ -190,8 +27,6 @@ header {
     letter-spacing: 1px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.4);
 }
-
-/* MAIN CONTAINER */
 .container {
     width: 90%;
     max-width: 850px;
@@ -201,16 +36,12 @@ header {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(12px);
     padding: 2rem;
-    transition: 0.3s ease;
 }
-
-/* HEADINGS */
 h2, h3 {
     text-align: center;
     color: #64ffda;
+    text-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
 }
-
-/* FORM ELEMENTS */
 input, select, button, textarea {
     width: 100%;
     padding: 12px;
@@ -220,16 +51,7 @@ input, select, button, textarea {
     background-color: #1e293b;
     color: #e2e8f0;
     font-size: 1rem;
-    transition: 0.3s;
 }
-
-input:focus, textarea:focus, select:focus {
-    outline: none;
-    border-color: #64ffda;
-    box-shadow: 0 0 8px rgba(100, 255, 218, 0.4);
-}
-
-/* BUTTONS */
 button {
     background: linear-gradient(90deg, #64ffda, #38bdf8);
     color: #0a192f;
@@ -238,26 +60,8 @@ button {
     cursor: pointer;
     border-radius: 10px;
     padding: 12px;
-    transition: all 0.3s ease;
 }
-
-button:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(90deg, #38bdf8, #64ffda);
-    box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
-}
-
-/* LINKS */
-a {
-    color: #64ffda;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* TABLES */
+.hidden { display: none; }
 table {
     width: 100%;
     border-collapse: collapse;
@@ -266,39 +70,33 @@ table {
     overflow: hidden;
     background: rgba(15, 23, 42, 0.8);
 }
-
 th, td {
     padding: 12px;
     text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    white-space: normal;
 }
-
 th {
     background: linear-gradient(90deg, #1e3c72, #2a5298);
     color: #fff;
 }
-
 tr:nth-child(even) td {
     background-color: rgba(30, 41, 59, 0.8);
 }
-
-/* STATUS COLORS */
 .status {
     font-weight: bold;
     text-transform: capitalize;
 }
-
 .pending { color: #facc15; }
 .inprogress { color: #38bdf8; }
 .resolved { color: #22c55e; }
-
-/* TABS */
 .tab-btns {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
     gap: 0.5rem;
 }
-
 .tab-btns button {
     flex: 1;
     background: #1e293b;
@@ -306,56 +104,41 @@ tr:nth-child(even) td {
     border-radius: 8px;
     border: 1px solid #334155;
     padding: 10px;
-    transition: 0.3s;
 }
-
 .tab-btns button.active {
     background: linear-gradient(90deg, #38bdf8, #64ffda);
     color: #0a192f;
 }
-
-/* PASSWORD ICON */
-.password-container {
-    position: relative;
+td textarea {
+    width: 100%;
+    height: 70px;
+    resize: none;
+    border-radius: 8px;
+    background-color: rgba(17, 34, 64, 0.75);
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+    backdrop-filter: blur(6px);
+    max-width: 100%;
+    display: block;
 }
-
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+td textarea::-webkit-scrollbar {
+    width: 6px;
 }
-
-.toggle-password svg {
-    width: 22px;
-    height: 22px;
-    fill: #94a3b8;
-    transition: 0.3s;
+td textarea::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 4px;
 }
-
-.toggle-password:hover svg {
-    fill: #64ffda;
-}
-
-/* MOBILE-FRIENDLY ADJUSTMENTS */
-@media (max-width: 600px) {
-    .container {
-        padding: 1.5rem;
-    }
-
-    header {
-        font-size: 1.3rem;
-    }
-
-    input, button, select, textarea {
-        font-size: 0.95rem;
-    }
-
-    table, th, td {
-        font-size: 0.9rem;
-        word-wrap: break-word;
-    }
+td:nth-child(8) {
+    max-width: 220px;
+    overflow-wrap: break-word;
 }
 </style>
 </head>
@@ -370,14 +153,7 @@ tr:nth-child(even) td {
     <div id="loginForm">
         <h3>Login</h3>
         <input type="text" id="loginUsername" placeholder="Username">
-
-        <div class="password-container">
-            <input type="password" id="loginPassword" placeholder="Password">
-            <span class="toggle-password" onclick="togglePassword('loginPassword', this)">
-                <svg viewBox="0 0 24 24"><path d="M12 4.5C7.305 4.5 3.188 7.364 1.125 12c2.063 4.636 6.18 7.5 10.875 7.5S20.812 16.636 22.875 12C20.812 7.364 16.695 4.5 12 4.5zm0 12.5a5 5 0 110-10 5 5 0 010 10z"/><circle cx="12" cy="12" r="2.5"/></svg>
-            </span>
-        </div>
-
+        <input type="password" id="loginPassword" placeholder="Password">
         <button onclick="login()">Login</button>
         <p>Don’t have an account? <a href="#" onclick="showRegister()">Create one</a></p>
     </div>
@@ -385,19 +161,11 @@ tr:nth-child(even) td {
     <div id="registerForm" class="hidden">
         <h3>Create Account</h3>
         <input type="text" id="regUsername" placeholder="Username">
-
-        <div class="password-container">
-            <input type="password" id="regPassword" placeholder="Password">
-            <span class="toggle-password" onclick="togglePassword('regPassword', this)">
-                <svg viewBox="0 0 24 24"><path d="M12 4.5C7.305 4.5 3.188 7.364 1.125 12c2.063 4.636 6.18 7.5 10.875 7.5S20.812 16.636 22.875 12C20.812 7.364 16.695 4.5 12 4.5zm0 12.5a5 5 0 110-10 5 5 0 010 10z"/><circle cx="12" cy="12" r="2.5"/></svg>
-            </span>
-        </div>
-
+        <input type="password" id="regPassword" placeholder="Password">
         <select id="regRole">
             <option value="user">User</option>
             <option value="admin">Admin</option>
         </select>
-
         <button onclick="register()">Register</button>
         <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
     </div>
@@ -410,14 +178,23 @@ tr:nth-child(even) td {
     <h3>File a Complaint</h3>
     <select id="roomSelect">
         <option value="">Select Room</option>
-        <option>401</option><option>402</option><option>403</option>
-        <option>404</option><option>405</option><option>406</option><option>409</option>
+        <option>401</option>
+        <option>402</option>
+        <option>403</option>
+        <option>404</option>
+        <option>405</option>
+        <option>406</option>
+        <option>407</option>
+        <option>408</option>
+        <option>409</option>
     </select>
     <textarea id="issueInput" placeholder="Describe your issue..."></textarea>
     <button onclick="submitComplaint()">Submit</button>
+
     <h3>Your Complaints</h3>
+    <input type="text" id="userSearchInput" placeholder="Search by Room Number..." onkeyup="searchUserComplaints()">
     <table id="userTable">
-        <tr><th>Room</th><th>Issue</th><th>Status</th><th>Reported</th><th>Fixed By</th><th>Start</th><th>End</th></tr>
+        <tr><th>Room</th><th>Issue</th><th>Status</th><th>Reported</th><th>Remarks</th><th>Fixed By</th><th>Start</th><th>End</th><th>Actions</th></tr>
     </table>
 </div>
 
@@ -431,9 +208,10 @@ tr:nth-child(even) td {
         <button onclick="switchTab('In Progress', event)">In Progress</button>
         <button onclick="switchTab('Resolved', event)">Resolved</button>
     </div>
-
+    <input type="text" id="adminSearchInput" placeholder="Search by Room Number..." onkeyup="searchAdminComplaints()">
+    
     <table id="adminTable">
-        <tr><th>User</th><th>Room</th><th>Issue</th><th>Status</th><th>Reported</th><th>Start</th><th>End</th><th>Fixed By</th><th>Actions</th></tr>
+        <tr><th>User</th><th>Room</th><th>Issue</th><th>Status</th><th>Reported</th><th>Start</th><th>End</th><th>Remarks</th><th>Fixed By</th><th>Actions</th></tr>
     </table>
 </div>
 
@@ -488,12 +266,14 @@ function logout() {
 function showUser() {
     document.getElementById('authContainer').classList.add('hidden');
     document.getElementById('userContainer').classList.remove('hidden');
+    document.querySelector('#userContainer h2').textContent = `User Dashboard — Welcome, ${currentUser.username}!`;
     loadUserComplaints();
 }
 
 function showAdmin() {
     document.getElementById('authContainer').classList.add('hidden');
     document.getElementById('adminContainer').classList.remove('hidden');
+    document.querySelector('#adminContainer h2').textContent = `Admin Dashboard — Logged in as: ${currentUser.username}`;
     loadAdminComplaints();
 }
 
@@ -510,7 +290,8 @@ function submitComplaint() {
         reportedTime: new Date().toLocaleString(),
         startTime: '',
         endTime: '',
-        fixedBy: ''
+        fixedBy: '',
+        remark: ''
     };
     complaints.push(report);
     saveData();
@@ -519,9 +300,22 @@ function submitComplaint() {
     alert('Complaint submitted!');
 }
 
+// --- Delete Function ---
+function deleteComplaint(id) {
+    if (!confirm('Are you sure you want to delete this complaint?')) return;
+    complaints = complaints.filter(c => c.id !== id);
+    saveData();
+    if (currentUser.role === 'admin') {
+        loadAdminComplaints();
+    } else {
+        loadUserComplaints();
+    }
+}
+
+// --- Load User Table ---
 function loadUserComplaints() {
     const table = document.getElementById('userTable');
-    table.innerHTML = '<tr><th>Room</th><th>Issue</th><th>Status</th><th>Reported</th><th>Fixed By</th><th>Start</th><th>End</th></tr>';
+    table.innerHTML = '<tr><th>Room</th><th>Issue</th><th>Status</th><th>Reported</th><th>Remarks</th><th>Fixed By</th><th>Start</th><th>End</th><th>Actions</th></tr>';
     complaints.filter(c => c.user === currentUser.username).forEach(c => {
         table.innerHTML += `
             <tr>
@@ -529,16 +323,19 @@ function loadUserComplaints() {
                 <td>${c.issue}</td>
                 <td class="status ${c.status.toLowerCase().replace(' ', '')}">${c.status}</td>
                 <td>${c.reportedTime}</td>
+                <td>${c.remark || '-'}</td>
                 <td>${c.fixedBy || '-'}</td>
                 <td>${c.startTime || '-'}</td>
                 <td>${c.endTime || '-'}</td>
+                <td>${c.status === 'Pending' ? `<button onclick="deleteComplaint(${c.id})">Delete</button>` : '-'}</td>
             </tr>`;
     });
 }
 
+// --- Load Admin Table ---
 function loadAdminComplaints() {
     const table = document.getElementById('adminTable');
-    table.innerHTML = '<tr><th>User</th><th>Room</th><th>Issue</th><th>Status</th><th>Reported</th><th>Start</th><th>End</th><th>Fixed By</th><th>Actions</th></tr>';
+    table.innerHTML = '<tr><th>User</th><th>Room</th><th>Issue</th><th>Status</th><th>Reported</th><th>Start</th><th>End</th><th>Remarks</th><th>Fixed By</th><th>Actions</th></tr>';
     complaints.filter(c => c.status === currentTab).forEach(c => {
         table.innerHTML += `
         <tr>
@@ -549,13 +346,52 @@ function loadAdminComplaints() {
             <td>${c.reportedTime}</td>
             <td>${c.startTime || '-'}</td>
             <td>${c.endTime || '-'}</td>
+            <td>${(currentTab === 'In Progress' || currentTab === 'Resolved') ? 
+                `<textarea id="remark-${c.id}" placeholder="Write remark...">${c.remark || ''}</textarea>` : 
+                (c.remark || '-')}</td>
             <td>${c.fixedBy || '-'}</td>
             <td>
                 ${c.status === 'Pending' ? `<button onclick="updateStatus(${c.id}, 'In Progress')">Start</button>` : ''}
-                ${c.status === 'In Progress' ? `<button onclick="updateStatus(${c.id}, 'Resolved')">Resolve</button>` : ''}
+                ${c.status === 'In Progress' ? `<button onclick="saveRemark(${c.id}); updateStatus(${c.id}, 'Resolved')">Resolve</button>` : ''}
+                ${c.status === 'Resolved' ? `<button onclick="saveRemark(${c.id})">💾 Save Remark</button>` : ''}
+                <button onclick="deleteComplaint(${c.id})">🗑 Delete</button>
             </td>
         </tr>`;
     });
+}
+
+// --- Search Functions ---
+function searchUserComplaints() {
+    const input = document.getElementById('userSearchInput').value.trim().toUpperCase();
+    const table = document.getElementById('userTable');
+    const tr = table.getElementsByTagName('tr');
+
+    for (let i = 1; i < tr.length; i++) {
+        const td = tr[i].getElementsByTagName('td')[0];
+        tr[i].style.display = td && td.textContent.toUpperCase().includes(input) ? '' : 'none';
+    }
+}
+
+function searchAdminComplaints() {
+    const input = document.getElementById('adminSearchInput').value.trim().toUpperCase();
+    const table = document.getElementById('adminTable');
+    const tr = table.getElementsByTagName('tr');
+
+    for (let i = 1; i < tr.length; i++) {
+        const td = tr[i].getElementsByTagName('td')[1];
+        tr[i].style.display = td && td.textContent.toUpperCase().includes(input) ? '' : 'none';
+    }
+}
+
+function saveRemark(id) {
+    const report = complaints.find(c => c.id === id);
+    if (!report) return;
+    const textarea = document.getElementById(`remark-${id}`);
+    if (textarea) {
+        report.remark = textarea.value.trim();
+        saveData();
+        alert('Remark saved!');
+    }
 }
 
 function updateStatus(id, newStatus) {
@@ -576,18 +412,6 @@ function switchTab(tabName, e) {
     document.querySelectorAll('.tab-btns button').forEach(btn => btn.classList.remove('active'));
     e.target.classList.add('active');
     loadAdminComplaints();
-}
-
-function togglePassword(id, icon) {
-    const input = document.getElementById(id);
-    const svg = icon.querySelector('svg');
-    if (input.type === "password") {
-        input.type = "text";
-        svg.style.fill = "#00c6a7";
-    } else {
-        input.type = "password";
-        svg.style.fill = "#777";
-    }
 }
 </script>
 </body>

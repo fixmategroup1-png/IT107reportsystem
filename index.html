@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FixMate - ICTC Complaint System</title>
-
 <style>
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, #0a192f, #112240);
+    background: linear-gradient(135deg, #003d26, #006b3a);
     color: #f0f4ff;
     display: flex;
     flex-direction: column;
@@ -17,7 +16,7 @@ body {
     min-height: 100vh;
 }
 header {
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    background: linear-gradient(90deg, #009e55, #00bf63);
     color: #fff;
     width: 100%;
     padding: 1.2rem;
@@ -31,66 +30,90 @@ header {
     width: 90%;
     max-width: 850px;
     margin: 2rem auto;
-    background: rgba(17, 34, 64, 0.7);
+    background: rgba(0, 64, 37, 0.85);
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(12px);
     padding: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    height: auto;
+    overflow: visible;
 }
 h2, h3 {
     text-align: center;
-    color: #64ffda;
-    text-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
+    color: #00bf63;
+    text-shadow: 0 0 8px rgba(0, 191, 99, 0.3);
 }
 input, select, button, textarea {
     width: 100%;
     padding: 12px;
     margin: 0.6rem 0;
     border-radius: 10px;
-    border: 1px solid #334155;
-    background-color: #1e293b;
+    border: 1px solid #005c3b;
+    background-color: #002d1b;
     color: #e2e8f0;
     font-size: 1rem;
 }
+textarea {
+    resize: vertical;
+    min-height: 100px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
 button {
-    background: linear-gradient(90deg, #64ffda, #38bdf8);
-    color: #0a192f;
+    background: linear-gradient(90deg, #00bf63, #009e55);
+    color: #ffffff;
     font-weight: bold;
     border: none;
     cursor: pointer;
     border-radius: 10px;
     padding: 12px;
+    transition: 0.3s;
+}
+button:hover {
+    background: linear-gradient(90deg, #00a857, #007a43);
 }
 .hidden { display: none; }
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
     border-radius: 12px;
     overflow: hidden;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(0, 45, 27, 0.8);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    table-layout: fixed;
 }
 th, td {
     padding: 12px;
     text-align: left;
     vertical-align: top;
     word-wrap: break-word;
-    white-space: normal;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 }
 th {
-    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    background: linear-gradient(90deg, #009e55, #00bf63);
     color: #fff;
 }
 tr:nth-child(even) td {
-    background-color: rgba(30, 41, 59, 0.8);
+    background-color: rgba(0, 60, 30, 0.7);
 }
 .status {
     font-weight: bold;
     text-transform: capitalize;
 }
 .pending { color: #facc15; }
-.inprogress { color: #38bdf8; }
+.inprogress { color: #00bf63; }
 .resolved { color: #22c55e; }
+
 .tab-btns {
     display: flex;
     justify-content: space-between;
@@ -99,48 +122,51 @@ tr:nth-child(even) td {
 }
 .tab-btns button {
     flex: 1;
-    background: #1e293b;
+    background: #003d26;
     color: #e2e8f0;
     border-radius: 8px;
-    border: 1px solid #334155;
+    border: 1px solid #00bf63;
     padding: 10px;
 }
 .tab-btns button.active {
-    background: linear-gradient(90deg, #38bdf8, #64ffda);
+    background: linear-gradient(90deg, #00bf63, #00ffae);
     color: #0a192f;
+    font-weight: bold;
 }
 td textarea {
     width: 100%;
-    height: 70px;
-    resize: none;
+    height: auto;
+    min-height: 70px;
+    resize: vertical;
     border-radius: 8px;
-    background-color: rgba(17, 34, 64, 0.75);
+    background-color: rgba(0, 45, 27, 0.85);
     color: #e2e8f0;
-    border: 1px solid #334155;
+    border: 1px solid #005c3b;
     padding: 8px;
     font-family: inherit;
     font-size: 0.95rem;
     overflow-y: auto;
-    overflow-x: hidden;
     word-wrap: break-word;
+    overflow-wrap: break-word;
     white-space: pre-wrap;
     box-sizing: border-box;
-    backdrop-filter: blur(6px);
-    max-width: 100%;
-    display: block;
 }
 td textarea::-webkit-scrollbar {
     width: 6px;
 }
 td textarea::-webkit-scrollbar-thumb {
-    background: #38bdf8;
+    background: #00bf63;
     border-radius: 4px;
 }
-td:nth-child(8) {
-    max-width: 220px;
-    overflow-wrap: break-word;
+a {
+    color: #00bf63;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 </style>
+
 </head>
 <body>
 
